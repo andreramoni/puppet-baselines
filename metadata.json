@@ -1,0 +1,14 @@
+{
+  "name": "andreramoni-baselines",
+  "version": "0.1.0",
+  "author": "Andre Ramoni",
+  "summary": "A set of baselines to servers",
+  "license": "Apache 2.0",
+  "source": "https://github.com/andreramoni/puppet-baselines.git",
+  "project_page": "https://github.com/andreramoni/puppet-baselines",
+  "issues_url": "https://github.com/andreramoni/puppet-baselines/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
