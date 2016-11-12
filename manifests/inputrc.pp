@@ -1,16 +1,11 @@
-# == Class: inputrc
+# == Class: baselines::inputrc
 #
 # This class manipulates /etc/inputrc.
 #
-# === Parameters
-#
-# [*sample_parameter*]
-#
-#
 # === Variables
 #
-# [*sample_variable*]
-#
+# [*inputrc_options*]
+#   Hash of inputrc options to ensure.
 #
 # === Examples
 #
@@ -22,21 +17,11 @@
 #
 # Andre Ramoni
 #
-class baselines::inputrc {
-
-  File_line {
-    path  => '/etc/inputrc',
-    multiple => true,
-  }
-
-  file_line { 'inputrc_showall':
-    ensure => 'present',
-    line   => 'set show-all-if-ambiguous on',
-    match  => '^set show-all-if-ambiguous.*',
-  }
-  file_line { 'inputrc_completion':
-    ensure => 'present',
-    line   => 'set completion-ignore-case on',
-    match  => '^set completion-ignore-case.*',
+class baselines::inputrc (
+  $inputrc_options = $::baselines::params::inputrc_options,
+) inherits baselines::params {
+  augeas { 'inputrc':
+    context => '/files/etc/inputrc',
+    changes => $inputrc_options,
   }
 }
