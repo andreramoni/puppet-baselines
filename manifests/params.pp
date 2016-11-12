@@ -24,10 +24,6 @@ class baselines::params {
     'RedHat' => 'sshd',
     'Debian' => 'ssh',
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 83e2e966910e42fceeec35476cfc2fc6d9a7832a
   $sshd_permitrootlogin = 'yes'
   $sshd_x11forwarding   = 'no'
   $sshd_usedns          = 'no'
