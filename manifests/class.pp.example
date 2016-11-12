@@ -1,0 +1,29 @@
+# == Class: 
+#
+# Full description of class trollme here.
+#
+# === Parameters
+#
+# [*sample_parameter*]
+#
+#
+# === Variables
+#
+# [*sample_variable*]
+#
+#
+# === Examples
+#
+#  class { 'trollme':
+#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
+#  }
+#
+# === Authors
+#
+# Andre Ramoni
+#
+
+class trollme {
+
+
+}
