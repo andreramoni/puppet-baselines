@@ -45,4 +45,5 @@ class baselines {
   include baselines::ntp
   include baselines::packages
   include baselines::scripts
+  include baselines::redbutton
 }
