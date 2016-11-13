@@ -11,7 +11,7 @@
 #   Hash of packages to remove.
 #
 # === Examples
-#
+# 
 #  class { 'baselines::packages': }
 #
 # === Authors
