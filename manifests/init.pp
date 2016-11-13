@@ -36,6 +36,8 @@
 # Copyright 2016 Your name here, unless otherwise noted.
 #
 class baselines {
-
-
+  include baselines::hosts_localhost
+  include baselines::inputrc
+  include baselines::sysctl
+  include baselines::vmwaretools
 }

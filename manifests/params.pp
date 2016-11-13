@@ -7,5 +7,16 @@ class baselines::params {
     'set completion-ignore-case on',
   ]
 
+  # vmwaretools:
+  $vmwaretools_package = 'open-vm-tools'
+
+  # hosts_localhost:
+  $hosts_localhost = '/etc/hosts'
+
+  # sysctl:
+  $sysctl_options = [
+    'set kernel.panic 3',
+    'set vm.panic_on_oom 1',
+  ]
 
 }

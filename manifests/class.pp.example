@@ -1,4 +1,4 @@
-# == Class: 
+# == Class: baselines::
 #
 # Full description of class trollme here.
 #
@@ -14,16 +14,14 @@
 #
 # === Examples
 #
-#  class { 'trollme':
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+#  class { 'baselines::': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class trollme {
+class baselines:: {
 
 
 }
