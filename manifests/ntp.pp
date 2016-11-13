@@ -12,7 +12,9 @@
 #
 # === Examples
 #
-#  class { 'baselines::ntp': }
+#  class { 'baselines::ntp':
+#           ntp_role => 'server',
+#        }
 #
 # === Authors
 #
@@ -28,12 +30,13 @@ class baselines::ntp (
     'server': { $restrict_options = 'kod notrap nomodify nopeer noquery' }
     default: { fail("NTP role ${ntp_role} not supported.") }
   }
-  $ntp_restrict = [ "-4 default ${restrict_options}",
-                    "-6 default ${restrict_options}",
-                    '127.0.0.1',
-                    '::1',
-                    $::ipaddress,
-                  ]
+  $ntp_restrict = [
+    "-4 default ${restrict_options}",
+    "-6 default ${restrict_options}",
+    '127.0.0.1',
+    '::1',
+    $::ipaddress,
+  ]
 
   class { '::ntp':
     servers  => $ntp_servers,
