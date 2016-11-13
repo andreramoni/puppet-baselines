@@ -30,4 +30,5 @@ class baselines::params {
   $sshd_usedns          = 'no'
   $sshd_printmotd       = 'no'
   $sshd_printlastlog    = 'no'
+
 }
