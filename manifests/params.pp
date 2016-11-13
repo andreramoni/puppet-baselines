@@ -25,9 +25,9 @@ class baselines::params {
     'Debian' => 'ssh',
     default  => undef,
   }
-  $sshd_permitrootlogin = 'yes',
-  $sshd_x11forwarding   = 'no',
-  $sshd_usedns          = 'no',
-  $sshd_printmotd       = 'no',
-  $sshd_printlastlog    = 'no',
+  $sshd_permitrootlogin = 'yes'
+  $sshd_x11forwarding   = 'no'
+  $sshd_usedns          = 'no'
+  $sshd_printmotd       = 'no'
+  $sshd_printlastlog    = 'no'
 }
