@@ -43,4 +43,5 @@ class baselines {
   include baselines::ssh_server
   include baselines::custom_profile
   include baselines::ntp
+  include baselines::packages
 }

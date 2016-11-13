@@ -23,6 +23,7 @@ class baselines::params {
   $sshd_service = $::osfamily ? {
     'RedHat' => 'sshd',
     'Debian' => 'ssh',
+    default  => undef,
   }
   $sshd_permitrootlogin = 'yes'
   $sshd_x11forwarding   = 'no'
@@ -35,5 +36,22 @@ class baselines::params {
 
   # ntp:
   $ntp_servers = [ 'br.pool.ntp.org', '1.pool.ntp.org', 'time-c.nist.gov']
+
+  # packages:
+  $packages_to_install = $::osfamily ? {
+    'RedHat' => [
+      'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 'nload',
+      'curl', 'hdparm', 'lshw', 'iotop', 'less', 'htop', 'traceroute',
+      'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
+      'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
+    ],
+    'Debian' => '',
+    default  => undef,
+  }
+  $packages_to_remove = $::osfamily ? {
+    'RedHat' => [ 'system-config-kdump' ],
+    'Debian' => [ '' ],
+    default  => undef,
+  }
 
 }
