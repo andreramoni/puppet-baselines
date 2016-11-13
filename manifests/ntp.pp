@@ -20,8 +20,8 @@
 #
 
 class baselines::ntp (
-  $ntp_servers = [ 'br.pool.ntp.org', ],
-  $ntp_role = 'client',
+  $ntp_servers = $::baselines::params::ntp_servers,
+  $ntp_role    = 'client',
 ) {
   case $ntp_role {
     'client': { $restrict_options = 'kod notrap nomodify nopeer noserve' }

@@ -33,4 +33,7 @@ class baselines::params {
   # custom_profile:
   $custom_profile_file = '/etc/profile.d/custom_profile.sh'
 
+  # ntp:
+  $ntp_servers = [ 'br.pool.ntp.org', '1.pool.ntp.org', 'time-c.nist.gov']
+
 }
