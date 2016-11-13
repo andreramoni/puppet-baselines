@@ -44,4 +44,5 @@ class baselines {
   include baselines::custom_profile
   include baselines::ntp
   include baselines::packages
+  include baselines::scripts
 }
