@@ -42,4 +42,5 @@ class baselines {
   include baselines::vmwaretools
   include baselines::ssh_server
   include baselines::custom_profile
+  include baselines::ntp
 }
