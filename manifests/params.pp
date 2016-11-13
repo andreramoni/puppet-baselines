@@ -30,4 +30,7 @@ class baselines::params {
   $sshd_printmotd       = 'no'
   $sshd_printlastlog    = 'no'
 
+  # custom_profile:
+  $custom_profile_file = '/etc/profile.d/custom_profile.sh'
+
 }
