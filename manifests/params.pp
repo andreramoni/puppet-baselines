@@ -19,4 +19,15 @@ class baselines::params {
     'set vm.panic_on_oom 1',
   ]
 
+  # ssh_server:
+  $sshd_service = $::osfamily {
+    'RedHat' => 'sshd',
+    'Debian' => 'ssh',
+    default  => undef,
+  }
+  $sshd_permitrootlogin = 'yes',
+  $sshd_x11forwarding   = 'no',
+  $sshd_usedns          = 'no',
+  $sshd_printmotd       = 'no',
+  $sshd_printlastlog    = 'no',
 }

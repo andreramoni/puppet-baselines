@@ -40,4 +40,5 @@ class baselines {
   include baselines::inputrc
   include baselines::sysctl
   include baselines::vmwaretools
+  include baselines::ssh_server
 }
