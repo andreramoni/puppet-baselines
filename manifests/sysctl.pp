@@ -24,9 +24,14 @@ define baselines::sysctl (
 ) {
 
   augeas { "sysctl_${title}":
-      context => '/files/etc/sysctl.conf',
-      changes => $sysctl_options,
+    context => '/files/etc/sysctl.conf',
+    changes => $sysctl_options,
+    notify  => Class['sysctl_reload'],
   }
-  notify  => Class['sysctl_reload'],
+  exec { "sysctl_${title}":
+    command     => '/sbin/sysctl -p',
+    refreshonly => true,
+  }
+
 
 }
