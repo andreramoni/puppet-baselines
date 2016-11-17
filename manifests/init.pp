@@ -39,6 +39,7 @@ class baselines {
   include baselines::hosts_localhost
   include baselines::inputrc
   include baselines::sysctl
+  include baselines::sysctl_reload
   include baselines::vmwaretools
   include baselines::ssh_server
   include baselines::custom_profile
