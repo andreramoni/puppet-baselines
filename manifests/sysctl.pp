@@ -18,7 +18,10 @@
 # Andre Ramoni
 #
 
-define baselines::sysctl {
+define baselines::sysctl (
+  $sysctl_options,
+) {
+
   augeas { "sysctl_${title}":
     context => '/files/etc/sysctl.conf',
     changes => $sysctl_options,
