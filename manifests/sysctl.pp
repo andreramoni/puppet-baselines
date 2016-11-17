@@ -16,7 +16,7 @@
 # Andre Ramoni
 #
 
-class baselines::sysctl (
+define baselines::sysctl (
   $sysctl_options = $::baselines::params::sysctl_options,
 ) inherits baselines::params {
 
