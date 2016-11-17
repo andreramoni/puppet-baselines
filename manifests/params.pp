@@ -17,10 +17,10 @@ class baselines::params {
 
   ########################################################################
   # sysctl:
-  $sysctl_options = [
-    'set kernel.panic 3',
-    'set vm.panic_on_oom 1',
-  ]
+  #$sysctl_options = [
+  #  'set kernel.panic 3',
+  #  'set vm.panic_on_oom 1',
+  #]
   $sysctl_reload_command = '/sbin/sysctl -p'
 
   ########################################################################

@@ -1,4 +1,4 @@
-# == Class: baselines::sysctl
+# == Type: baselines::sysctl
 #
 # Basic tunning of sysctl.
 #
@@ -9,20 +9,16 @@
 #
 # === Examples
 #
-#  class { 'baselines::sysctl': }
+# baselines::sysctl {'firewall':
+#   sysctl_options => [ 'net.ipv4.ip_forward']
+# }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-define baselines::sysctl (
-  $sysctl_options = [
-    'set kernel.panic 3',
-    'set vm.panic_on_oom 1',
-  ],
-) {
-
+define baselines::sysctl {
   augeas { "sysctl_${title}":
     context => '/files/etc/sysctl.conf',
     changes => $sysctl_options,
