@@ -17,8 +17,11 @@
 #
 
 define baselines::sysctl (
-  $sysctl_options = $::baselines::params::sysctl_options,
-) inherits baselines::params {
+  $sysctl_options = [
+    'set kernel.panic 3',
+    'set vm.panic_on_oom 1',
+  ],
+) {
 
   augeas { 'sysctl':
       context => '/files/etc/sysctl.conf',
