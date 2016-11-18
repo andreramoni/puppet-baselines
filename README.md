@@ -1,4 +1,4 @@
-# baselines
+# Rbaselines
 
 #### Table of Contents
 
@@ -17,13 +17,14 @@
 A common set of baselines.
 
 ## Module Description
-A common set os baselines.
+Use these classes (and many more, but I'll need time to put them here) in your
+profile classes
 
 ## Setup
 To install, go to your modules directory and execute:
 
 ~~~shell
-git clone https://github.com/andreramoni/puppet-baselines baselines
+git clone https://github.com/andreramoni/puppet-rbaselines rbaselines
 ~~~
 
 ## Usage

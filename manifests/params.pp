@@ -1,4 +1,4 @@
-class baselines::params {
+class rbaselines::params {
 
   ########################################################################
   # inputrc:

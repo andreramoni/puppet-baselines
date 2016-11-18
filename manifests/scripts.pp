@@ -1,4 +1,4 @@
-# == Class: baselines::scripts
+# == Class: rbaselines::scripts
 #
 # A class to upload common scripts to your servers
 #
@@ -9,19 +9,19 @@
 #
 # === Examples
 #
-#  class { 'baselines::scripts': }
+#  class { 'rbaselines::scripts': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class baselines::scripts (
-    $scripts_dir = $::baselines::params::scripts_dir,
+class rbaselines::scripts (
+    $scripts_dir = $::rbaselines::params::scripts_dir,
 ) {
   file { $scripts_dir:
     ensure  => 'directory',
-    source  => 'puppet:///modules/baselines/scripts',
+    source  => 'puppet:///modules/rbaselines/scripts',
     recurse => true,
   }
 

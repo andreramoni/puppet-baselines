@@ -1,4 +1,4 @@
-# == Class: baselines::vmwaretools
+# == Class: rbaselines::vmwaretools
 #
 # This class installs vmware tools package
 # if the system is running on vmware.
@@ -10,15 +10,15 @@
 #
 # === Examples
 #
-#  class { 'baselines::vmwaretools': }
+#  class { 'rbaselines::vmwaretools': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
-class baselines::vmwaretools (
-  $vmwaretools_package = $::baselines::params::vmwaretools_package,
-) inherits baselines::params {
+class rbaselines::vmwaretools (
+  $vmwaretools_package = $::rbaselines::params::vmwaretools_package,
+) inherits rbaselines::params {
 
   if $::virtual == 'vmware' {
     if ( $::operatingsystem == 'Debian' and $::lsbmajdistrelease >= 7  )

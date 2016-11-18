@@ -1,6 +1,6 @@
-# == Class: baselines::
+# == Class: rbaselines::
 #
-# Full description of class trollme here.
+# Full description of class.
 #
 # === Parameters
 #
@@ -14,14 +14,14 @@
 #
 # === Examples
 #
-#  class { 'baselines::': }
+#  class { 'rbaselines::': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class baselines:: {
+class rbaselines:: {
 
 
 }

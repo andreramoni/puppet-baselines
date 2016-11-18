@@ -1,6 +1,6 @@
-# == Class: baselines
+# == Class: rbaselines
 #
-# Full description of class baselines here.
+# Full description of class rbaselines here.
 #
 # === Parameters
 #
@@ -21,12 +21,6 @@
 #   global variables should be avoided in favor of class parameters as
 #   of Puppet 2.6.)
 #
-# === Examples
-#
-#  class { 'baselines':
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
-#
 # === Authors
 #
 # Author Name <author@domain.com>
@@ -35,15 +29,15 @@
 #
 # Copyright 2016 Your name here, unless otherwise noted.
 #
-class baselines {
-  include baselines::hosts_localhost
-  include baselines::inputrc
-  include baselines::sysctl
-  include baselines::vmwaretools
-  include baselines::ssh_server
-  include baselines::custom_profile
-  include baselines::ntp
-  include baselines::packages
-  include baselines::scripts
-  include baselines::redbutton
+class rbaselines {
+  include rbaselines::hosts_localhost
+  include rbaselines::inputrc
+  include rbaselines::sysctl
+  include rbaselines::vmwaretools
+  include rbaselines::ssh_server
+  include rbaselines::custom_profile
+  include rbaselines::ntp
+  include rbaselines::packages
+  include rbaselines::scripts
+  include rbaselines::redbutton
 }

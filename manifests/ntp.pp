@@ -1,4 +1,4 @@
-# == Class: baselines::ntp
+# == Class: rbaselines::ntp
 #
 # A class to configure ntp as client or server
 #
@@ -12,7 +12,7 @@
 #
 # === Examples
 #
-#  class { 'baselines::ntp':
+#  class { 'rbaselines::ntp':
 #           ntp_role => 'server',
 #        }
 #
@@ -21,8 +21,8 @@
 # Andre Ramoni
 #
 
-class baselines::ntp (
-  $ntp_servers = $::baselines::params::ntp_servers,
+class rbaselines::ntp (
+  $ntp_servers = $::rbaselines::params::ntp_servers,
   $ntp_role    = 'client',
 ) {
   case $ntp_role {

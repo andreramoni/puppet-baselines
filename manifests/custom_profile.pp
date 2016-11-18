@@ -1,4 +1,4 @@
-# == Class: baselines::custom_profile
+# == Class: rbaselines::custom_profile
 #
 # Custom profile.
 #
@@ -9,20 +9,20 @@
 #
 # === Examples
 #
-#  class { 'baselines::custom_profile': }
+#  class { 'rbaselines::custom_profile': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class baselines::custom_profile (
-  $custom_profile_file = $::baselines::params::custom_profile_file,
-) inherits baselines::params {
+class rbaselines::custom_profile (
+  $custom_profile_file = $::rbaselines::params::custom_profile_file,
+) inherits rbaselines::params {
   file { $custom_profile_file:
     ensure  => file,
     mode    => '0755',
-    content => template('baselines/profiles/custom_profile.erb'),
+    content => template('rbaselines/profiles/custom_profile.erb'),
 
   }
 

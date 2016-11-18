@@ -1,4 +1,4 @@
-# == Class: baselines::ssh_server
+# == Class: rbaselines::ssh_server
 #
 # Basic tunning of SSHd.
 #
@@ -9,21 +9,21 @@
 #
 # === Examples
 #
-#  class { 'baselines::ssh_server': }
+#  class { 'rbaselines::ssh_server': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class baselines::ssh_server (
-  $sshd_service         = $::baselines::params::sshd_service,
-  $sshd_permitrootlogin = $::baselines::params::sshd_permitrootlogin,
-  $sshd_x11forwarding   = $::baselines::params::sshd_x11forwarding,
-  $sshd_usedns          = $::baselines::params::sshd_usedns,
-  $sshd_printmotd       = $::baselines::params::sshd_printmotd,
-  $sshd_printlastlog    = $::baselines::params::sshd_printlastlog,
-) inherits baselines::params {
+class rbaselines::ssh_server (
+  $sshd_service         = $::rbaselines::params::sshd_service,
+  $sshd_permitrootlogin = $::rbaselines::params::sshd_permitrootlogin,
+  $sshd_x11forwarding   = $::rbaselines::params::sshd_x11forwarding,
+  $sshd_usedns          = $::rbaselines::params::sshd_usedns,
+  $sshd_printmotd       = $::rbaselines::params::sshd_printmotd,
+  $sshd_printlastlog    = $::rbaselines::params::sshd_printlastlog,
+) inherits rbaselines::params {
 
   augeas { 'sshd_config':
       context => '/files/etc/ssh/sshd_config',
