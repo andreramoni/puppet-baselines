@@ -20,7 +20,7 @@
 class baselines::sysctl (
   $sysctl_options = $::baselines::params::sysctl_options,
 ) inherits baselines::params {
-  baselines::sysctl { 'baselines':
+  baselines::sysctl_options { 'baselines':
     sysctl_options => $sysctl_options,
   }
 }
