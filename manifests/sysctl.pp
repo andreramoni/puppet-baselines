@@ -30,26 +30,27 @@
 # Andre Ramoni
 #
 class baselines::sysctl (
-  $sysctl_options = $::baselines::params::sysctl_options,
+  $sysctl_options        = $::baselines::params::sysctl_options,
+  $sysctl_reload_command = $::baselines::params::sysctl_reload_command,
+  $sysctl_augeas_context = $::baselines::params::sysctl_augeas_context,
 ) inherits baselines::params {
   baselines::sysctl_options { 'baselines':
-    sysctl_options => $sysctl_options,
+    sysctl_options        => $sysctl_options,
+    sysctl_reload_command => $sysctl_reload_command,
+    sysctl_augeas_context => $sysctl_augeas_context,
   }
 }
 
 define baselines::sysctl_options (
   $sysctl_options,
 ) {
-
   augeas { "sysctl_${title}":
-    context => '/files/etc/sysctl.conf',
+    context => $sysctl_augeas_context,
     changes => $sysctl_options,
     notify  => Exec["sysctl_${title}"],
   }
   exec { "sysctl_${title}":
-    command     => '/sbin/sysctl -p',
+    command     => $sysctl_reload_command,
     refreshonly => true,
   }
-
-
 }
