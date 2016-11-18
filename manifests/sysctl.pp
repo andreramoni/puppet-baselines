@@ -25,7 +25,7 @@ class baselines::sysctl (
   }
 }
 
-define baselines::sysctl (
+define baselines::sysctl_options (
   $sysctl_options,
 ) {
 
