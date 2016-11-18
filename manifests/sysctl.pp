@@ -43,6 +43,8 @@ class baselines::sysctl (
 
 define baselines::sysctl_options (
   $sysctl_options,
+  $sysctl_reload_command,
+  $sysctl_augeas_context,
 ) {
   augeas { "sysctl_${title}":
     context => $sysctl_augeas_context,
