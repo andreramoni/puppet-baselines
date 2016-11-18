@@ -2,7 +2,7 @@
   "name": "andreramoni-baselines",
   "version": "0.1.2",
   "author": "Andre Ramoni",
-  "summary": "A set of baselines to servers",
+  "summary": "A set of baseline classes to servers",
   "license": "Apache 2.0",
   "source": "https://github.com/andreramoni/puppet-baselines.git",
   "project_page": "https://github.com/andreramoni/puppet-baselines",
