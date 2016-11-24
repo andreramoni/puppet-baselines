@@ -11,5 +11,4 @@ class rbaselines::sysstate (
     mode    => '0755',
     content => template($sysstate_script),
   }
-
 }
