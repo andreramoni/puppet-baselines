@@ -1,0 +1,21 @@
+#!/bin/bash
+SPDIR=<%= @sysstate_dir %>
+MDAY=$(date +%d)
+BKPDIR="$SPDIR/day-$MDAY/"
+
+if [ ! -d "$BKPDIR" ]; then
+  mkdir -p $BKPDIR || exit 1
+fi
+
+cd $BKPDIR || exit 1
+
+ifconfig > ifconfig
+ip a > ip-a
+route -n > route
+iptables-save > iptables-save
+ps aufx > ps
+uptime > uptime
+cp /etc/hosts .
+crontab -l > contrab-l
+cp /etc/crontab etc-crontab
+tar czf var-spool-cron.tgz /var/spool/cron

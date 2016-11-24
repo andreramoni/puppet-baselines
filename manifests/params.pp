@@ -67,6 +67,11 @@ class rbaselines::params {
   # scripts:
   $scripts_dir = '/etc/scripts'
 
+  ########################################################################
+  # sysstate:
+  $sysstate_cron = '/etc/cron.daily/sysstate.sh'
+  $sysstate_dir  = '/etc/sysstate'
+  $sysstate_script = 'rbaselines/sysstate/sysstate.sh.erb'
 
   ########################################################################
 
