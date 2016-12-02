@@ -21,11 +21,7 @@ class rbaselines::vmwaretools (
 ) inherits rbaselines::params {
 
   if $::virtual == 'vmware' {
-    if ( $::operatingsystem == 'Debian' and $::lsbmajdistrelease >= 7  )
-    or ( $::operatingsystem == 'Ubuntu' and $::lsbmajdistrelease >= 14 )
-    or ( $::osfamily == 'RedHat' and $::lsbmajdistrelease >= 6 ) {
-      package { $vmwaretools_package: ensure => 'installed' }
-    }
+    package { $vmwaretools_package: ensure => 'installed' }
   }
 
 }

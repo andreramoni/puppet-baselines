@@ -33,7 +33,7 @@ class rbaselines {
   include rbaselines::hosts_localhost
   include rbaselines::inputrc
   include rbaselines::sysctl
-  #include rbaselines::vmwaretools
+  include rbaselines::vmwaretools
   include rbaselines::ssh_server
   include rbaselines::custom_profile
   #include rbaselines::ntp
