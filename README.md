@@ -14,11 +14,11 @@
 6. [Development - Guide for contributing to the module](#development)
 
 ## Overview
-A common set of baselines.
+A common set of baselines for servers.
 
 ## Module Description
-Use these classes (and many more, but I'll need time to put them here) in your
-profile classes
+I use these classes (and many more, but I'll need time to put them here) in my
+profiles to ensure some common and basic configurations.
 
 ## Setup
 To install, go to your modules directory and execute:
@@ -28,5 +28,7 @@ git clone https://github.com/andreramoni/puppet-rbaselines rbaselines
 ~~~
 
 ## Usage
+
+
 
 ## Release Notes/Contributors/Etc **Optional**
