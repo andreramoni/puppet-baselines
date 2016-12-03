@@ -40,4 +40,5 @@ class rbaselines {
   include rbaselines::packages
   include rbaselines::scripts
   include rbaselines::redbutton
+  include rbaselines::remove_package_proxy
 }
