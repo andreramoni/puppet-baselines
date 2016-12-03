@@ -52,7 +52,12 @@ class rbaselines::params {
       'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
       'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
     ],
-    'Debian' => '',
+    'Debian' => [
+      'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 'nload',
+      'curl', 'hdparm', 'lshw', 'iotop', 'less', 'htop', 'traceroute',
+      'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
+      'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
+    ],
     default  => undef,
   }
   $packages_to_remove = $::osfamily ? {
