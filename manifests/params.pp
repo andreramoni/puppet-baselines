@@ -53,7 +53,7 @@ class rbaselines::params {
       'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
     ],
     'Debian' => [
-      'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 'nload',
+      'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim', 'nload',
       'curl', 'hdparm', 'lshw', 'iotop', 'less', 'htop', 'traceroute',
       'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
       'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
