@@ -55,7 +55,7 @@ class rbaselines::params {
     'Debian' => [
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim', 'nload',
       'curl', 'hdparm', 'lshw', 'iotop', 'less', 'htop', 'traceroute',
-      'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
+      'screen', 'strace', 'mlocate', 'telnet',
       'psmisc', 'sysfsutils', 'bash-completion',
     ],
     default  => undef,
