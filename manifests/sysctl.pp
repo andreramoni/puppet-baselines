@@ -32,16 +32,14 @@
 
 define rbaselines::sysctl (
   $sysctl_options,
-  $sysctl_reload_command,
-  $sysctl_augeas_context,
 ) {
   augeas { "sysctl_${title}":
-    context => $sysctl_augeas_context,
+    context => '/files/etc/sysctl.conf',
     changes => $sysctl_options,
     notify  => Exec["sysctl_${title}"],
   }
   exec { "sysctl_${title}":
-    command     => $sysctl_reload_command,
+    command     => '/sbin/sysctl -p',
     refreshonly => true,
   }
 }

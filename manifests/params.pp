@@ -21,8 +21,6 @@ class rbaselines::params {
     'set kernel.panic 3',
     'set vm.panic_on_oom 1',
   ]
-  $sysctl_reload_command = '/sbin/sysctl -p'
-  $sysctl_augeas_context = '/files/etc/sysctl.conf'
 
   ########################################################################
   # ssh_server:
