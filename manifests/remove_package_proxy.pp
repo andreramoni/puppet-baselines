@@ -2,7 +2,7 @@ class rbaselines::remove_package_proxy (
 ) inherits rbaselines::params {
 
 
-  Class['rbaselines::basic_packages'] -> Class['rbaselines::remove_package_proxy']
+  Class['rbaselines::packages'] -> Class['rbaselines::remove_package_proxy']
 
   case $::osfamily {
     'RedHat': {
@@ -31,4 +31,3 @@ class rbaselines::remove_package_proxy (
   }
 
 }
-
