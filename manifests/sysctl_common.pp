@@ -34,7 +34,7 @@ class rbaselines::sysctl_common (
   $sysctl_reload_command = $::rbaselines::params::sysctl_reload_command,
   $sysctl_augeas_context = $::rbaselines::params::sysctl_augeas_context,
 ) inherits rbaselines::params {
-  rbaselines::sysctl_options { 'rbaselines':
+  rbaselines::sysctl { 'rbaselines':
     sysctl_options        => $sysctl_options,
     sysctl_reload_command => $sysctl_reload_command,
     sysctl_augeas_context => $sysctl_augeas_context,
