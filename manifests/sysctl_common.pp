@@ -29,19 +29,14 @@
 #
 # Andre Ramoni
 #
-
-define rbaselines::sysctl (
-  $sysctl_options,
-  $sysctl_reload_command,
-  $sysctl_augeas_context,
-) {
-  augeas { "sysctl_${title}":
-    context => $sysctl_augeas_context,
-    changes => $sysctl_options,
-    notify  => Exec["sysctl_${title}"],
-  }
-  exec { "sysctl_${title}":
-    command     => $sysctl_reload_command,
-    refreshonly => true,
+class rbaselines::sysctl_common (
+  $sysctl_options        = $::rbaselines::params::sysctl_options,
+  $sysctl_reload_command = $::rbaselines::params::sysctl_reload_command,
+  $sysctl_augeas_context = $::rbaselines::params::sysctl_augeas_context,
+) inherits rbaselines::params {
+  rbaselines::sysctl_options { 'rbaselines':
+    sysctl_options        => $sysctl_options,
+    sysctl_reload_command => $sysctl_reload_command,
+    sysctl_augeas_context => $sysctl_augeas_context,
   }
 }
