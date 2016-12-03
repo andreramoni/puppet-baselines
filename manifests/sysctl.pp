@@ -29,7 +29,7 @@
 #
 # Andre Ramoni
 #
-class rbaselines::sysctl (
+class rbaselines::sysctl_common (
   $sysctl_options        = $::rbaselines::params::sysctl_options,
   $sysctl_reload_command = $::rbaselines::params::sysctl_reload_command,
   $sysctl_augeas_context = $::rbaselines::params::sysctl_augeas_context,
@@ -41,7 +41,7 @@ class rbaselines::sysctl (
   }
 }
 
-define rbaselines::sysctl_options (
+define rbaselines::sysctl (
   $sysctl_options,
   $sysctl_reload_command,
   $sysctl_augeas_context,
