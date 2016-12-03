@@ -62,7 +62,7 @@ class rbaselines::params {
   }
   $packages_to_remove = $::osfamily ? {
     'RedHat' => [ 'system-config-kdump' ],
-    'Debian' => [ '' ],
+    'Debian' => [ 'exim4' ],
     default  => undef,
   }
 
