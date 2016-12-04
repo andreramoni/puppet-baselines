@@ -40,7 +40,7 @@ class rbaselines::ntp (
 
   class { '::ntp':
     servers  => $ntp_servers,
-    restrict => [ $ntp_restrict, $ntp_servers ],
+    restrict => $ntp_restrict + $ntp_servers,
   }
 
 }
