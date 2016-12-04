@@ -1,20 +1,6 @@
-# This a class AND a defined type
-# == Class: rbaselines::sysctl
+# This a defined type
+# == rbaselines::sysctl
 # Basic tunning of sysctl.
-#
-# === Parameters
-# [*sysctl_options*]
-#   Hash of sysctl options.
-#
-# === Examples
-# include rbaselines::sysctl # will take options from params.pp
-#
-# class { 'rbaselines::sysctl':
-#   sysctl_options => [ 'set kernel.panic 3', ],
-# }
-#
-# == Type: rbaselines::sysctl_options
-# Custom tunning of sysctl options by profile/role.
 #
 # === Parameters
 # [*sysctl_options*]
