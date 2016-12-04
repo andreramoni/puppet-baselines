@@ -77,6 +77,10 @@ class rbaselines::params {
   $sysstate_script = 'rbaselines/sysstate/sysstate.sh.erb'
 
   ########################################################################
+  # timezone:
+  $manage_timezone = true
+  $timezone = 'UTC'
+  ########################################################################
 
 
 }

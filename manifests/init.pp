@@ -36,9 +36,10 @@ class rbaselines {
   include rbaselines::vmwaretools
   include rbaselines::ssh_server
   include rbaselines::custom_profile
- include rbaselines::ntp
+  include rbaselines::ntp
   include rbaselines::packages
   include rbaselines::scripts
   include rbaselines::redbutton
   include rbaselines::remove_package_proxy
+  include rbaselines::timezone
 }
