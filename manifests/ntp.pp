@@ -24,7 +24,7 @@
 class rbaselines::ntp (
   $ntp_servers = $::rbaselines::params::ntp_servers,
   $ntp_role    = 'client',
-) {
+) inherits rbaselines::params {
   case $ntp_role {
     'client': { $restrict_options = 'kod notrap nomodify nopeer noserve' }
     'server': { $restrict_options = 'kod notrap nomodify nopeer noquery' }
