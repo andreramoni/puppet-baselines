@@ -1,4 +1,4 @@
-define rbaselines::myuser (
+define rbaselines::user (
   $password,
   $ssh_keys,
   $user = $title,
