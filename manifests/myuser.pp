@@ -7,7 +7,7 @@ define rbaselines::myuser (
   $managehome = true,
   $target_user = 'both',
   $gid = $title,
-  $groups = [''],
+  $groups = [],
 
 ) {
 
