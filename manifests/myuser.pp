@@ -12,6 +12,9 @@ define rbaselines::myuser (
 ) {
 
   # The system user:
+  group { $gid:
+    ensure => present,
+  }
   user { $user:
     ensure     => $ensure,
     password   => $password,
@@ -19,6 +22,7 @@ define rbaselines::myuser (
     managehome => true,
     gid        => $gid,
     groups     => $groups,
+    require    => Group[$gid],
   }
 
   # The ssh keys:
