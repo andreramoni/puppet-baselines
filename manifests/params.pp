@@ -80,6 +80,14 @@ class rbaselines::params {
   # timezone:
   $manage_timezone = true
   $timezone = 'UTC'
+
+  ########################################################################
+  # sudoers and groups:
+  $sudo_admins_file = '/etc/sudoers.d/admins'
+  $sudo_groups   = [ '', ]
+
+
+
   ########################################################################
 
 
