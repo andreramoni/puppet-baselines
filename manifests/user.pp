@@ -18,7 +18,7 @@ define rbaselines::user (
   user { $user:
     ensure     => $ensure,
     password   => $password,
-    shell      => '/bin/bash',
+    shell      => $shell,
     managehome => true,
     gid        => $gid,
     groups     => $groups,
@@ -27,13 +27,13 @@ define rbaselines::user (
 
   # The ssh keys:
   $ssh_keys.keys.each |String $keyname| {
-    # notify { "Array - ${keyname}: ${ssh_keys[$keyname]}":  }
     if ( $target_user == $user ) or ( $target_user == 'both' ){
       ssh_authorized_key { "sshkey-${user}-${keyname}":
-        ensure => $ensure,
-        type   => 'ssh-rsa',
-        key    => $ssh_keys[$keyname],
-        user   => $user,
+        ensure  => $ensure,
+        type    => 'ssh-rsa',
+        key     => $ssh_keys[$keyname],
+        user    => $user,
+        require => User[$user],
       }
     }
     if ( $target_user == 'root' ) or ( $target_user == 'both' ){
