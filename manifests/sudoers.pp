@@ -8,4 +8,9 @@ class rbaselines::sudoers (
       content => template('rbaselines/sudoers/admins.erb'),
     }
   }
+  else {
+    file { $sudo_admins_file:
+      ensure  => 'absent',
+    }
+  }
 }
