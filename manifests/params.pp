@@ -2,7 +2,8 @@ class rbaselines::params {
 
   ########################################################################
   # Globals:
-  $puppet_server = 'foreman'
+  #$puppet_server = 'foreman'
+  $puppet_server = generate('/bin/hostname -f')
 
   ########################################################################
   # inputrc:
