@@ -88,6 +88,14 @@ class rbaselines::params {
   $mco_broker = $puppet_server
 
   ########################################################################
+  # foreman activemq:
+  $activemq_package = 'activemq'
+  $activemq_service = 'activemq'
+  $activemq_cfgfile = '/etc/activemq/activemq.xml'
+  $activemq_link_src = '/usr/share/activemq/activemq-data'
+  $activemq_link_dst = '/var/cache/activemq/data'
+
+  ########################################################################
   # timezone:
   $manage_timezone = true
   $timezone = 'UTC'
