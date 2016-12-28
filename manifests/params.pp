@@ -2,7 +2,7 @@ class rbaselines::params {
 
   ########################################################################
   # Globals:
-  $puppet_server = 'foreman.localdomain'
+  $puppet_server = 'foreman'
 
   ########################################################################
   # inputrc:

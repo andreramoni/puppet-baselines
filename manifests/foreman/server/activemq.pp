@@ -5,6 +5,7 @@ class rbaselines::foreman::server::activemq (
   $activemq_link_dst = $::rbaselines::params::activemq_link_dst,
   $activemq_cfgfile = $::rbaselines::params::activemq_cfgfile,
 ) inherits rbaselines::params {
+  require rbaselines::repos::puppetlabs_deps
   package { $activemq_package:
     ensure => 'present',
   }
