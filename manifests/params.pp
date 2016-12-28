@@ -1,6 +1,10 @@
 class rbaselines::params {
 
   ########################################################################
+  # Globals:
+  $puppet_server = 'foreman.localdomain'
+
+  ########################################################################
   # inputrc:
   $inputrc_options = [
     'set show-all-if-ambiguous on',
@@ -77,9 +81,17 @@ class rbaselines::params {
   $sysstate_script = 'rbaselines/sysstate/sysstate.sh.erb'
 
   ########################################################################
+  # MCO:
+  $mcoclient_user = 'mcoclient'
+  $mcoclient_password = 'clientmco'
+  $mco_plugins_dir = '/opt/puppetlabs/mcollective/mcollective/'
+  $mco_broker = $puppet_server
+
+  ########################################################################
   # timezone:
   $manage_timezone = true
   $timezone = 'UTC'
+
   ########################################################################
 
 

@@ -42,4 +42,5 @@ class rbaselines {
   include rbaselines::redbutton
   include rbaselines::remove_package_proxy
   include rbaselines::timezone
+  include rbaselines::mco_server
 }
