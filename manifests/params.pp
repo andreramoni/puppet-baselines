@@ -54,7 +54,7 @@ class rbaselines::params {
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 'nload',
       'curl', 'hdparm', 'lshw', 'iotop', 'less', 'htop', 'traceroute',
       'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
-      'psmisc', 'sysfsutils', 'bind-utils', 'bash-completion',
+      'psmisc', 'sysfsutils', 'bash-completion',
     ],
     'Debian' => [
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim', 'nload',
@@ -92,6 +92,16 @@ class rbaselines::params {
   $manage_timezone = true
   $timezone = 'UTC'
 
+<<<<<<< HEAD
+=======
+  ########################################################################
+  # sudoers and groups:
+  $sudo_admins_file = '/etc/sudoers.d/admins'
+  $sudo_groups   = [ '', ]
+
+
+
+>>>>>>> 37a792938f55899d40e3428445c090971b82d0f8
   ########################################################################
 
 
