@@ -43,5 +43,6 @@ class rbaselines {
   include rbaselines::remove_package_proxy
   include rbaselines::timezone
   include rbaselines::mco_server
+  include rbaselines::mco_plugins
   include rbaselines::sudoers
 }
