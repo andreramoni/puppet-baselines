@@ -42,9 +42,6 @@ class rbaselines {
   include rbaselines::redbutton
   include rbaselines::remove_package_proxy
   include rbaselines::timezone
-<<<<<<< HEAD
   include rbaselines::mco_server
-=======
   include rbaselines::sudoers
->>>>>>> 37a792938f55899d40e3428445c090971b82d0f8
 }
