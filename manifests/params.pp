@@ -107,6 +107,19 @@ class rbaselines::params {
   $sudo_groups   = [ '', ]
 
   ########################################################################
+  # Logrotate:
+  $logrotate_rotate_every = 'day'
+  $logrotate_rotate = '30'
+  $logrotate_olddir = '/var/log/old'
+  $logrotate_syslog_files = [
+    '/var/log/cron',
+    '/var/log/maillog',
+    '/var/log/messages',
+    '/var/log/secure',
+    '/var/log/spooler',
+    ]
+
+  ########################################################################
 
 
 }
