@@ -6,6 +6,10 @@ class rbaselines::params {
   $puppet_server = generate('/bin/hostname')
 
   ########################################################################
+  # Puppet agent:
+  $puppet_agent_service = 'puppet'
+
+  ########################################################################
   # inputrc:
   $inputrc_options = [
     'set show-all-if-ambiguous on',
