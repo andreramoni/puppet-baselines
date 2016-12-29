@@ -47,4 +47,5 @@ class rbaselines {
   include rbaselines::sudoers
   include rbaselines::logrotate
   include rbaselines::swapfile
+  include rbaselines::puppet_agent
 }
