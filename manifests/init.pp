@@ -45,4 +45,6 @@ class rbaselines {
   include rbaselines::mco_server
   include rbaselines::mco_plugins
   include rbaselines::sudoers
+  include rbaselines::logrotate
+  include rbaselines::swapfile
 }
