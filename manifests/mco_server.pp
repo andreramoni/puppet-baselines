@@ -3,7 +3,7 @@ class rbaselines::mco_server (
   $mcoclient_password = $::rbaselines::params::mcoclient_password,
   $mco_broker = $::rbaselines::params::mco_broker,
 ) inherits rbaselines::params {
-  unless $::osfamily == 'Debian' {
+  if $::osfamily == 'RedHat' {
     class { '::mcollective':
       client              => false,
       middleware_user     => $mcoclient_user,
