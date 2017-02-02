@@ -23,6 +23,7 @@ profiles to ensure some common and basic configurations.
 ## Setup
 To install, go to your modules directory and execute:
 
+
 ~~~shell
 git clone https://github.com/andreramoni/puppet-rbaselines rbaselines
 ~~~
