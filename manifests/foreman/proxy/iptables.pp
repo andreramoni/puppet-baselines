@@ -3,8 +3,7 @@ class rbaselines::foreman::proxy::iptables {
     chain    => 'POSTROUTING',
     jump     => 'MASQUERADE',
     proto    => 'all',
-    outiface => 'eth0',
-    source   => "${::network_eth1}/24",
+    outiface => ${::networking.primary},
     table    => 'nat',
   }
   firewall { '01 REDIRECT':
