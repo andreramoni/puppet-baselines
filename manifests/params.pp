@@ -103,7 +103,7 @@ class rbaselines::params {
   ########################################################################
   # timezone:
   $manage_timezone = true
-  $timezone = 'UTC'
+  $timezone = 'Etc/UTC'
 
   ########################################################################
   # sudoers and groups:
