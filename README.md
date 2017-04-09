@@ -30,6 +30,4 @@ git clone https://github.com/andreramoni/puppet-rbaselines rbaselines
 
 ## Usage
 
-
-
 ## Release Notes/Contributors/Etc **Optional**
