@@ -5,13 +5,13 @@ class rbaselines::zabbix_agent (
 ) {
 
   package { 'zabbix22-agent': ensure => 'installed' }
-  file { '/etc/zabbix/zabbix_agend.conf':
+  file { '/etc/zabbix/zabbix_agentd.conf':
     ensure  => file,
     content => template('rbaselines/zabbix_agent/zabbix_agentd.conf.erb'),
-    require => Package['zabbix_agent'],
-    notify  => Service['zabbix_agent']
+    require => Package['zabbix22-agent'],
+    notify  => Service['zabbix-agent']
   }
-  service { 'zabbix_agent':
+  service { 'zabbix-agent':
     ensure => running,
     enable => true,
   }

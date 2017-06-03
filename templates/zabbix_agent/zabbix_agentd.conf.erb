@@ -69,14 +69,7 @@ LogFileSize=0
 
 ##### Passive checks related
 
-### Option: Server
-#	List of comma delimited IP addresses (or hostnames) of Zabbix servers.
-#	Incoming connections will be accepted only from the hosts listed here.
-#	If IPv6 support is enabled then '127.0.0.1', '::127.0.0.1', '::ffff:127.0.0.1' are treated equally.
-#
-# Mandatory: no
 # Default:
-# Server=
 
 Server=<%= @zabbix_server %>
 
@@ -107,17 +100,8 @@ Server=<%= @zabbix_server %>
 
 ##### Active checks related
 
-### Option: ServerActive
-#	List of comma delimited IP:port (or hostname:port) pairs of Zabbix servers for active checks.
-#	If port is not specified, default port is used.
-#	IPv6 addresses must be enclosed in square brackets if port for that host is specified.
-#	If port is not specified, square brackets for IPv6 addresses are optional.
-#	If this parameter is not specified, active checks are disabled.
-#	Example: ServerActive=127.0.0.1:20051,zabbix.domain,[::1]:30051,::1,[12fc::1]
-#
 # Mandatory: no
 # Default:
-# ServerActive=
 
 ServerActive=<%= @zabbix_server %>
 
@@ -180,7 +164,6 @@ Hostname=Zabbix server
 
 ### Option: BufferSize
 #	Maximum number of values in a memory buffer. The agent will send
-#	all collected data to Zabbix Server or Proxy if the buffer is full.
 #
 # Mandatory: no
 # Range: 2-65535
@@ -188,7 +171,6 @@ Hostname=Zabbix server
 # BufferSize=100
 
 ### Option: MaxLinesPerSecond
-#	Maximum number of new lines the agent will send per second to Zabbix Server
 #	or Proxy processing 'log' and 'logrt' active checks.
 #	The provided value will be overridden by the parameter 'maxlines',
 #	provided in 'log' or 'logrt' item keys.
