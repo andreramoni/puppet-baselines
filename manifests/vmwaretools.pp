@@ -19,9 +19,7 @@
 class rbaselines::vmwaretools (
   $vmwaretools_package = $::rbaselines::params::vmwaretools_package,
 ) inherits rbaselines::params {
-
   if $::virtual == 'vmware' {
     package { $vmwaretools_package: ensure => 'installed' }
   }
-
 }
