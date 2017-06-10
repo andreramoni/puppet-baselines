@@ -14,4 +14,3 @@ class rbaselines::puppet_agent (
     notify  => Service[$puppet_agent_service],
   }
 }
-
