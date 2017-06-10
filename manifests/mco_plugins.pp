@@ -18,3 +18,4 @@ class rbaselines::mco_plugins (
     }
   }
 }
+1
