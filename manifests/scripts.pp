@@ -24,5 +24,4 @@ class rbaselines::scripts (
     source  => 'puppet:///modules/rbaselines/scripts',
     recurse => true,
   }
-
 }

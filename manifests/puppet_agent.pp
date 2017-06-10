@@ -11,6 +11,7 @@ class rbaselines::puppet_agent (
     changes => [
       "set agent/server ${puppet_server}",
     ],
-    notify => Service[$puppet_agent_service],
+    notify  => Service[$puppet_agent_service],
   }
 }
+
