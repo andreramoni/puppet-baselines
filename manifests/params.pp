@@ -5,6 +5,9 @@ class rbaselines::params {
   #$puppet_server = 'foreman'
   $puppet_server = generate('/bin/hostname')
 
+  # Foreman-proxy pub key:
+  $foreman_proxy_pubkey = generate('cat /usr/share/foreman-proxy/.ssh/id_rsa_foreman_proxy.pub | awk \'{print $2}\'')
+
   ########################################################################
   # Puppet agent:
   $puppet_agent_service = 'puppet'
