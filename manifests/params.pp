@@ -6,7 +6,7 @@ class rbaselines::params {
   $puppet_server = generate('/bin/hostname')
 
   # Foreman-proxy pub key:
-  $foreman_proxy_pubkey = 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCfZHrv295HDzBWnpsrMFrvjQLjBxy4Ns9eO+mdwrpiSVqWxgfQ5JZ5kxoq6FfzODsn7la655A5khVsVYe8LD9bg4Nd2oakWch8trizBjlGvQLFf50rojI9t68Sv6Sm4C+UBGDWiJeZIFdSCWVA7HxX4hF64NYTbwCubglFrIjwfJar5iAnTxerJZJ22p2WgR4MmZS3lzbMXBWaqsiU1HAWZmE93LbMzPhEdah8+G09+W/s43rEjs5eTpj+rDskliO0XoDLsfyOlKg0l/x/cnhV8MC5mWrEX9FIqMrqiBRiIJv4fq8G44eRBzfYu3mRmzl0UvkelREXXhgBsGiTv20H'
+  #$foreman_proxy_pubkey = 'AAAAB3NzaC1yc2EAAAADAQABAAABAQCfZHrv295HDzBWnpsrMFrvjQLjBxy4Ns9eO+mdwrpiSVqWxgfQ5JZ5kxoq6FfzODsn7la655A5khVsVYe8LD9bg4Nd2oakWch8trizBjlGvQLFf50rojI9t68Sv6Sm4C+UBGDWiJeZIFdSCWVA7HxX4hF64NYTbwCubglFrIjwfJar5iAnTxerJZJ22p2WgR4MmZS3lzbMXBWaqsiU1HAWZmE93LbMzPhEdah8+G09+W/s43rEjs5eTpj+rDskliO0XoDLsfyOlKg0l/x/cnhV8MC5mWrEX9FIqMrqiBRiIJv4fq8G44eRBzfYu3mRmzl0UvkelREXXhgBsGiTv20H'
 
   ########################################################################
   # Puppet agent:
