@@ -4,7 +4,6 @@ class rbaselines::logrotate (
   $logrotate_rotate = $::rbaselines::params::logrotate_rotate,
   $logrotate_rotate_every = $::rbaselines::params::logrotate_rotate_every,
 ) inherits rbaselines::params {
-
   file { $logrotate_olddir:
     ensure => directory,
   }
