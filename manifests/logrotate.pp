@@ -31,3 +31,4 @@ class rbaselines::logrotate (
     sharedscripts => true,
   }
 }
+
