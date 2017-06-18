@@ -58,7 +58,7 @@ class rbaselines::params {
   ########################################################################
   # packages:
   $packages_to_install = $::osfamily ? {
-    'RedHat' => [
+    'RedHat' => [ 
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 
       'curl', 'hdparm', 'lshw', 'iotop', 'less', 'traceroute',
       'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
