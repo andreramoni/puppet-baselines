@@ -29,5 +29,6 @@ class rbaselines::logrotate (
     postrotate    => '/bin/kill -HUP `cat /var/run/syslogd.pid 2> /dev/null` 2> /dev/null || true',
     sharedscripts => true,
   }
+  
 }
 
