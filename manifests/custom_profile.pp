@@ -23,7 +23,6 @@ class rbaselines::custom_profile (
     ensure  => file,
     mode    => '0755',
     content => template('rbaselines/profiles/custom_profile.erb'),
-
   }
 
 }
