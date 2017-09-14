@@ -12,6 +12,6 @@ class rbaselines::foreman::proxy::foreman_proxy (
     dhcp                => true,
     dns                 => true,
     bmc                 => false,
-    realm               => false,
+    realm               => true,
   }
 }
