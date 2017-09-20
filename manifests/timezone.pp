@@ -10,8 +10,14 @@
 # === Examples
 #
 #  class { 'rbaselines::timezone':
-#    timezone => UTC,
+#    manage_timezone => true,
+#    timezone        => 'Etc/UTC',
 #  }
+#
+# === Foreman:
+# Use class parameters as follow (with the defaults above):
+# - manage_timezone: boolean
+# - timezone: Etc/UTC
 #
 # === Authors
 #
