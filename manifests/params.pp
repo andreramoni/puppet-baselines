@@ -83,11 +83,13 @@ class rbaselines::params {
   $cockpit_packages = $::osfamily ? {
     'RedHat' => [
       'cockpit-packagekit', 'cockpit-ws', 'cockpit-storaged', 'cockpit-subscriptions', 'cockpit-networkmanager',
+    ],
     'Debian' => [
       'cockpit',
     ],
     default  => undef,
   }
+
   ########################################################################
   # scripts:
   $scripts_dir = '/etc/scripts'
