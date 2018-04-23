@@ -4,7 +4,7 @@ class rbaselines::params {
   # Globals:
   #$puppet_server = 'foreman'
   $puppet_server = generate('/bin/hostname')
-  $puppet_runinterval = 900
+  $puppet_runinterval = 1800
   # Foreman-proxy pub key:
   $foreman_proxy_pubkey = ''
 
