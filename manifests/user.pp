@@ -5,7 +5,7 @@ define rbaselines::user (
   $ensure = $ensure,
   $shell = '/bin/bash',
   $managehome = true,
-  $target_user = 'both',
+  $target_user = 'root',
   $gid = $title,
   $groups = [],
 
@@ -46,3 +46,4 @@ define rbaselines::user (
     }
   }
 }
+
