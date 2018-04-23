@@ -77,7 +77,17 @@ class rbaselines::params {
     'Debian' => [ 'exim4' ],
     default  => undef,
   }
-
+  
+  ########################################################################
+  # cockpit:
+  $cockpit_packages = $::osfamily ? {
+    'RedHat' => [
+      'cockpit-packagekit', 'cockpit-ws', 'cockpit-storaged', 'cockpit-subscriptions', 'cockpit-networkmanager',
+    'Debian' => [
+      'cockpit',
+    ],
+    default  => undef,
+  }
   ########################################################################
   # scripts:
   $scripts_dir = '/etc/scripts'
