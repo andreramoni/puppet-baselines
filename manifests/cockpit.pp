@@ -4,7 +4,7 @@ class rbaselines::cockpit (
   package { $cockpit_packages: 
     ensure => 'installed', 
   }
-  service { 'cockpit':
+  service { 'cockpit.socket':
     ensure => running,
     enable => true,
   }
