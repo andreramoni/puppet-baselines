@@ -1,12 +1,12 @@
 if Facter.value('kernel') == 'Linux'
 	Facter.add("iface_mgmt") do
- 		setcode 'ip a sh | grep -P "inet 10.255" | awk \'{print $NF}\' | head -n 1'
+ 		setcode 'ip a sh | grep -P "inet 10.255\." | awk \'{print $NF}\' | head -n 1'
 	end
 end
 
 if Facter.value('kernel') == 'Linux'
 	Facter.add("iface_mgmt_ip") do
- 		setcode 'ip a sh | grep -P "inet 10.255" | awk \'{print $2}\' | head -n 1 | cut -f1 -d/'
+ 		setcode 'ip a sh | grep -P "inet 10.255\." | awk \'{print $2}\' | head -n 1 | cut -f1 -d/'
 	end
 end
 
