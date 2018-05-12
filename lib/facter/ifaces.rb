@@ -35,13 +35,13 @@ if Facter.value('kernel') == 'Linux'
 end
 
 if Facter.value('kernel') == 'Linux'
-	Facter.add("iface_dmz1") do
+	Facter.add("iface_dmz") do
  		setcode 'ip a sh | grep -P "inet 10.1\." | awk \'{print $NF}\' |cut -f1 -d: |  head -n 1'
 	end
 end
 
 if Facter.value('kernel') == 'Linux'
-	Facter.add("iface_dmz1_ip") do
+	Facter.add("iface_dmz_ip") do
  		setcode 'ip a sh | grep -P "inet 10.1\." | awk \'{print $2}\' | head -n 1 | cut -f1 -d/'
 	end
 end
