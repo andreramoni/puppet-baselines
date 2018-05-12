@@ -1,4 +1,4 @@
-# == Class: rbaselines::inputrc
+# == Class: rbaselines::linux::inputrc
 #
 # This class manipulates /etc/inputrc.
 #
@@ -11,7 +11,7 @@
 #
 # Andre Ramoni
 #
-class rbaselines::inputrc (
+class rbaselines::linux::inputrc (
   $inputrc_options = $::rbaselines::params::inputrc_options,
 ) inherits rbaselines::params {
   augeas { 'inputrc':

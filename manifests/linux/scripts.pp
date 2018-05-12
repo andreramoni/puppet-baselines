@@ -1,4 +1,4 @@
-# == Class: rbaselines::scripts
+# == Class: rbaselines::linux::scripts
 #
 # A class to upload common scripts to your servers
 #
@@ -9,14 +9,14 @@
 #
 # === Examples
 #
-#  class { 'rbaselines::scripts': }
+#  class { 'rbaselines::linux::scripts': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class rbaselines::scripts (
+class rbaselines::linux::scripts (
     $scripts_dir = $::rbaselines::params::scripts_dir,
 ) {
   file { $scripts_dir:

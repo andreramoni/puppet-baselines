@@ -1,4 +1,4 @@
-# == Class: rbaselines::custom_profile
+# == Class: rbaselines::linux::custom_profile
 #
 # Custom profile.
 #
@@ -16,7 +16,7 @@
 # Andre Ramoni
 #
 
-class rbaselines::custom_profile (
+class rbaselines::linux::custom_profile (
   $custom_profile_file = $::rbaselines::params::custom_profile_file,
 ) inherits rbaselines::params {
   file { $custom_profile_file:

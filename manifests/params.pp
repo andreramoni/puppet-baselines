@@ -103,47 +103,29 @@ class rbaselines::params {
   $sysstate_script = 'rbaselines/sysstate/sysstate.sh.erb'
 
   ########################################################################
-  # MCO:
-  $mcoclient_user = 'mcoclient'
-  $mcoclient_password = 'clientmco'
-  $mco_plugins_dir = '/opt/puppetlabs/mcollective/mcollective/'
-  $mco_broker = $puppet_server
-
-  ########################################################################
-  # foreman activemq:
-  $activemq_package = 'activemq'
-  $activemq_service = 'activemq'
-  $activemq_cfgfile = '/etc/activemq/activemq.xml'
-  $activemq_link_src = '/usr/share/activemq/activemq-data'
-  $activemq_link_dst = '/var/cache/activemq/data'
-
-  ########################################################################
-  # timezone:
-  $manage_timezone = true
-  $timezone = 'Etc/UTC'
-
-  ########################################################################
   # sudoers and groups:
   $sudo_admins_file = '/etc/sudoers.d/admins'
   $sudo_groups   = [ '', ]
 
   ########################################################################
-  # Logrotate:
-  $logrotate_rotate_every = 'day'
-  $logrotate_rotate = '30'
-  $logrotate_olddir = '/var/log/old'
-  $logrotate_syslog_files = [
-    '/var/log/cron',
-    '/var/log/maillog',
-    '/var/log/messages',
-    '/var/log/secure',
-    '/var/log/spooler',
-    ]
+  # Used by common/vmtools.pp:
+  $vmtools_pkg = $::osfamily ? {
+    'RedHat'  => 'open-vm-tools',
+    'Windows' => 'vmware-tools',
+  }
+  
+  $vmtools_srv = $::osfamily ? {
+    'RedHat'  => 'vmtoolsd',
+    'Windows' => 'VMTools',
+  }
 
   ########################################################################
-  # swapfile:
-  $swapfile = '/swapfile'
-  $swapsize = '1 Gb'
+  # Used by common/timezone.pp
+  $manage_timezone = 'yes'
+  $timezone = 'Etc/UTC'
+
+  ########################################################################
+
 
   ########################################################################
 

@@ -1,4 +1,4 @@
-class rbaselines::sysctl_common (
+class rbaselines::linux::sysctl_common (
   $sysctl_options        = $::rbaselines::params::sysctl_options,
 ) inherits rbaselines::params {
   rbaselines::sysctl { 'common':

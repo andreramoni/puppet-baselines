@@ -1,4 +1,4 @@
-# == Class: rbaselines::hosts_localhost
+# == Class: rbaselines::linux::hosts_localhost
 #
 # This class ensures a host entry in /etc/hosts.
 # Debian seems to do it right, but CentOS not.
@@ -10,13 +10,13 @@
 #
 # === Examples
 #
-#  class { 'rrbaselines::hosts_localhost': }
+#  class { 'rrbaselines::linux::hosts_localhost': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
-class rbaselines::hosts_localhost (
+class rbaselines::linux::hosts_localhost (
   $hosts_file = $::rbaselines::params::hosts_file,
 ) inherits rbaselines::params {
   host { 'hosts_localhost':

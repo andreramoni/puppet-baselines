@@ -1,4 +1,4 @@
-class rbaselines::sysstate (
+class rbaselines::linux::sysstate (
   $sysstate_dir    = $::rbaselines::params::sysstate_dir,
   $sysstate_cron   = $::rbaselines::params::sysstate_cron,
   $sysstate_script = $::rbaselines::params::sysstate_script,

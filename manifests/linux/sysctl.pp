@@ -16,7 +16,7 @@
 # Andre Ramoni
 #
 
-define rbaselines::sysctl (
+define rbaselines::linux::sysctl (
   $sysctl_options,
 ) {
   augeas { "sysctl_${title}":

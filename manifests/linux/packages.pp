@@ -1,4 +1,4 @@
-# == Class: rbaselines::packages
+# == Class: rbaselines::linux::packages
 #
 # Installs and unninstalls basic software.
 #
@@ -12,14 +12,14 @@
 #
 # === Examples
 #
-#  class { 'rbaselines::packages': }
+#  class { 'rbaselines::linux::packages': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class rbaselines::packages (
+class rbaselines::linux::packages (
   $packages_to_install = $::rbaselines::params::packages_to_install,
   $packages_to_remove  = $::rbaselines::params::packages_to_remove,
 ) inherits rbaselines::params {

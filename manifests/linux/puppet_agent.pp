@@ -1,4 +1,4 @@
-class rbaselines::puppet_agent (
+class rbaselines::linux::puppet_agent (
   $puppet_agent_service = $::rbaselines::params::puppet_agent_service,
   $puppet_server = $::rbaselines::params::puppet_server,
   $puppet_runinterval = $::rbaselines::params::puppet_runinterval,

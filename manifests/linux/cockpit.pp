@@ -1,4 +1,4 @@
-class rbaselines::cockpit (
+class rbaselines::linux::cockpit (
   $cockpit_packages = $::rbaselines::params::cockpit_packages,
 ) inherits rbaselines::params {
   package { $cockpit_packages: 

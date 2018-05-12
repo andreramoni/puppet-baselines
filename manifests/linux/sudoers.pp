@@ -1,4 +1,4 @@
-class rbaselines::sudoers (
+class rbaselines::linux::sudoers (
   $sudo_admins_file = $::rbaselines::params::sudo_admins_file,
   $sudo_groups = $::rbaselines::params::sudo_groups,
 ) inherits rbaselines::params {
