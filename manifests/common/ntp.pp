@@ -11,7 +11,7 @@ class rbaselines::common::ntp (
       }
       'Windows': {
         class { 'windowstime':
-          servers => [ 'pool.ntp.org' , 'time.windows.com' ]
+          servers => { $ntp_servers[0] => '0x01' }
         }
       }
       default: {
