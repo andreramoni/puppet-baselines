@@ -11,9 +11,7 @@ class rbaselines::common::ntp (
       }
       'Windows': {
         class { 'windowstime':
-          servers => { 'pool.ntp.org'     => '0x01',
-                       'time.windows.com' => '0x01',
-                     }
+          servers => [ 'pool.ntp.org' , 'time.windows.com' ]
         }
       }
       default: {
