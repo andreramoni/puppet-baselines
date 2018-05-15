@@ -54,10 +54,6 @@ class rbaselines::params {
   $custom_profile_file = '/etc/profile.d/custom_profile.sh'
 
   ########################################################################
-  # ntp:
-  $ntp_servers = [ 'br.pool.ntp.org', '1.pool.ntp.org', 'time-c.nist.gov']
-
-  ########################################################################
   # packages:
   $packages_to_install = $::osfamily ? {
     'RedHat' => [ 
@@ -124,6 +120,18 @@ class rbaselines::params {
   $manage_timezone = 'yes'
   $timezone = 'Etc/UTC'
 
+  ########################################################################
+  # Used by common/ntp.pp
+  $manage_ntp = 'yes'
+  $ntp_servers = [ 'br.pool.ntp.org' ]
+
+  ########################################################################
+
+
+  ########################################################################
+
+
+}
   ########################################################################
 
 
