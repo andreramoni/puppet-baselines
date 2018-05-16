@@ -10,8 +10,8 @@ class rbaselines::common::ntp (
         }      
       }
       'Windows': {
-        class { 'windowstime':
-          servers => { $ntp_servers[0] => '0x01' }
+        class { '::winntp':
+          servers => $ntp_servers,
         }
       }
       default: {
