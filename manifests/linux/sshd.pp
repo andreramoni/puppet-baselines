@@ -1,4 +1,4 @@
-# == Class: rbaselines::linux::ssh_server
+# == Class: rbaselines::linux::sshd
 #
 # Basic tunning of SSHd.
 #
@@ -9,14 +9,14 @@
 #
 # === Examples
 #
-#  class { 'rbaselines::linux::ssh_server': }
+#  class { 'rbaselines::linux::sshd': }
 #
 # === Authors
 #
 # Andre Ramoni
 #
 
-class rbaselines::linux::ssh_server (
+class rbaselines::linux::sshd (
   $sshd_service         = $::rbaselines::params::sshd_service,
   $sshd_permitrootlogin = $::rbaselines::params::sshd_permitrootlogin,
   $sshd_x11forwarding   = $::rbaselines::params::sshd_x11forwarding,
