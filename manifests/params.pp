@@ -60,7 +60,7 @@ class rbaselines::params {
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim-enhanced', 
       'curl', 'hdparm', 'lshw', 'iotop', 'less', 'traceroute',
       'screen', 'strace', 'mlocate', 'telnet', 'openssh-clients',
-      'psmisc', 'sysfsutils', 'bash-completion',
+      'psmisc', 'sysfsutils', 'bash-completion', 'net-tools',
     ],
     'Debian' => [
       'sudo', 'tcpdump', 'mtr', 'iptraf-ng', 'vim', 'nload',
