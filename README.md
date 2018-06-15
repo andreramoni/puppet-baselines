@@ -4,6 +4,7 @@
 #### Table of Contents
 
 1. [Description](#description)
+1. [Preconfiguration steps](#preconfiguration-steps)
 1. [Parametarized classes](#parametarized-classes)
 1. [Classes](#classes)
    * [common::ntp](#common-ntp)
@@ -35,6 +36,13 @@ Examples:
 - Users
 - Repositories
 - Timezone and NTP servers
+
+## Preconfiguration steps
+To chocolatey packges to work, put this on site.pp:<br>
+if ( $::kernel == 'Windows' ){<br>
+  Package { provider => 'chocolatey' }<br>
+}<br>
+
 
 
 ## Parametarized classes
