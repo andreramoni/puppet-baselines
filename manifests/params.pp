@@ -43,7 +43,7 @@ class rbaselines::params {
     'Debian' => 'ssh',
     default  => undef,
   }
-  $sshd_permitrootlogin = 'yes'
+  $sshd_permitrootlogin = 'no'
   $sshd_x11forwarding   = 'no'
   $sshd_usedns          = 'no'
   $sshd_printmotd       = 'no'
